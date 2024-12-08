@@ -29,7 +29,8 @@ def main():
         cards = CardtraderDataHandler.filter_by_condition(cards, condition)
         if cards:
             price_cents = CardtraderDataHandler.get_average_cheapest_cards(cards, nb_cheapest_cards)
-            print(f'Expansion: {expansion} | Card Name: {cards[0].name} | Collection Number: {collection_number} | Average price in cents for {nb_cheapest_cards} cheapest cards: {price_cents}')
+            print(f'Expansion: {expansion} | Card Name: {cards[0].name} | Collection Number: {collection_number} |', end="")
+            print(f'Average price in cents for {nb_cheapest_cards} cheapest cards: {price_cents}')
         else:
             print('No cards are found')
 
